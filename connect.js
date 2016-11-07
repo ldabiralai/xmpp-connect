@@ -1,8 +1,8 @@
-import Client from 'node-xmpp-client'
+const Client = require('node-xmpp-client')
 const argv = process.argv;
 
 if (argv.length < 4) {
-    console.error('Usage: babel-node connect.js <jid> <password>');
+    console.error('Usage: node connect.js <jid> <password>');
     process.exit(1)
 }
 
@@ -20,13 +20,6 @@ client.on('error', (error) => {
 })
 
 client.on('online', () => {
-    console.log('connected to service')
-    client.end()
+    console.log('service is up')
     process.exit(0)
 });
-
-client.connection.socket.on('error', () => {
-    console.error('disconnected')
-})
-
-client.end();
