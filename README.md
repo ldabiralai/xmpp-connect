@@ -3,23 +3,20 @@ Returns appropriate status code depending on whether or not the connection was s
 ### Usage
 
 ```sh
-node connect.js <jid> <password>
+$ > xmpp-connect user@jabber.ccc.de Pa55w0rd
+service is up # or XMPP authentication failure
+$ > echo $?
+0 # or 1 on failure
 ```
 
-##### Sucessful: 
+```js
+import xmppConnect from 'xmpp-connect'
 
-```bash
-$ > node connect.js user@jabber.ccc.de Pa55w0rd
-service is up
-$ > echo $?
-0
-```
-
-##### Failure:
-
-```bash
-$ > node connect.js user@jabber.ccc.de password
-XMPP authentication failure
-$ > echo $?
-1
+try {
+  await xmppConnect('user@jabber.ccc.de', 'Pa55w0rd')
+  
+  success()
+} catch (e) {
+  failure()
+}
 ```
