@@ -1,8 +1,11 @@
 {
-  "name": "xmpp-uptime",
+  "name": "xmpp-connect",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Check if xmpp service can be connected to",
+  "main": "connect.js",
+  "bin": {
+    "connect": "bin/connect"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

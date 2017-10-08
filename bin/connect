@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+const connect = require('../connect.js');
+
+const argv = process.argv;
+
+if (argv.length < 4) {
+    console.error('Usage: node connect.js <jid> <password>');
+    process.exit(1)
+}
+
+const jid = argv[2]
+const password = argv[3]
+
+uptime(jid, password)
+  .then((res) => {
+    console.log(res)
+    process.exit(0)
+  })
+  .catch((err) => {
+    console.log(err)
+    process.exit(1)
+  })
