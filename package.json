@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Check if xmpp service can be connected to",
   "main": "connect.js",
-  "bin": {
-    "connect": "bin/connect"
-  },
+  "bin": "bin/connect",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
