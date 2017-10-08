@@ -1,12 +1,12 @@
 Returns appropriate status code depending on whether or not the connection was succesful
 
-### Usage
+### Usage
 
 ```sh
 node connect.js <jid> <password>
 ```
 
-##### Sucessful: 
+##### Sucessful: 
 
 ```bash
 $ > node connect.js user@jabber.ccc.de Pa55w0rd
