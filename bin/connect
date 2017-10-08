@@ -11,7 +11,7 @@ if (argv.length < 4) {
 const jid = argv[2]
 const password = argv[3]
 
-connect(jid, password)
+connect({jid, password})
   .then((res) => {
     console.log(res)
     process.exit(0)

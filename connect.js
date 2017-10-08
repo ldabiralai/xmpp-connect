@@ -1,6 +1,8 @@
 const Client = require('node-xmpp-client')
 
-module.exports = (jid, password) => {
+module.exports = (options) => {
+  const {jid, password} = options
+
   return new Promise((resolve, reject) => {
     const client = new Client({
         jid,

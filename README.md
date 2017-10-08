@@ -13,7 +13,10 @@ $ > echo $?
 import xmppConnect from 'xmpp-connect'
 
 try {
-  await xmppConnect('user@jabber.ccc.de', 'Pa55w0rd')
+  await xmppConnect({
+    jid: 'user@jabber.ccc.de',
+    password: 'Pa55w0rd'
+  })
   
   success()
 } catch (e) {
